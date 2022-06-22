@@ -1,4 +1,4 @@
 streamlit==0.56.0
-numpy==1.18.1
+numpy==1.22.0
 time==1.0.0
 matplotlib==3.2.0
