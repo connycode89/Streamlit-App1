@@ -24,10 +24,11 @@ if input_iterations!='':
     st.write('Percent Error:', (pi_approx-np.pi)/np.pi*100)
     st.write('Execution Time:' ,time.time() - start_time, 'seconds')
 
-    random_points_plot = plt.scatter(x_array, y_array, color='blue', s=.1)
+    fig, ax = plt.subplots()
+    random_points_plot = ax.scatter(x_array, y_array, color='blue', s=.1)
     circle_plot = plt.Circle(( 0, 0 ), 1, color='red', linewidth=2, fill=False)
     ax = plt.gca()
     ax.cla()
     ax.add_artist(random_points_plot)
     ax.add_artist(circle_plot)
-    st.pyplot()
+    st.pyplot(fig)
